@@ -77,3 +77,19 @@ pass: cuatro44
 y la base de datos connect_to_mongo
 
 El uso esta documentado en el código mongo_connect.py
+
+
+    _______  __          ___           _______. __  ___               .______     ______     ______   .___________.    _______.___________..______          ___      .______
+    |   ____||  |        /   \         /       ||  |/  /               |   _  \   /  __  \   /  __  \  |           |   /       |           ||   _  \        /   \     |   _  \
+    |  |__   |  |       /  ^  \       |   (----`|  '  /      ______    |  |_)  | |  |  |  | |  |  |  | `---|  |----`  |   (----`---|  |----`|  |_)  |      /  ^  \    |  |_)  |
+    |   __|  |  |      /  /_\  \       \   \    |    <      |______|   |   _  <  |  |  |  | |  |  |  |     |  |        \   \       |  |     |      /      /  /_\  \   |   ___/
+    |  |     |  `----./  _____  \  .----)   |   |  .  \                |  |_)  | |  `--'  | |  `--'  |     |  |    .----)   |      |  |     |  |\  \----./  _____  \  |  |
+    |__|     |_______/__/     \__\ |_______/    |__|\__\               |______/   \______/   \______/      |__|    |_______/       |__|     | _| `._____/__/     \__\ | _|
+
+Como poner Bootstrap en las templates de flask
+Video tutoriales en:
+
+https://www.youtube.com/watch?v=S7ZLiUabaEo
+https://www.youtube.com/watch?v=PE9ZGniSDW8
+
+Se puede descargar en https://pythonhosted.org/Flask-Bootstrap/

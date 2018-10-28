@@ -1,0 +1,4 @@
+Este fichero solo es para almacenar información respecto al nuevo Blender y barnold (arnold para blender)
+
+link para acceder al proyecto barnold (beta):
+https://github.com/tyler-furby/barnold
