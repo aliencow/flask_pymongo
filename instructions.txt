@@ -1,0 +1,79 @@
+    ____    ____  __  .______     .___________. __    __       ___       __       _______ .__   __. ____    ____
+    \   \  /   / |  | |   _  \    |           ||  |  |  |     /   \     |  |     |   ____||  \ |  | \   \  /   /
+     \   \/   /  |  | |  |_)  |   `---|  |----`|  |  |  |    /  ^  \    |  |     |  |__   |   \|  |  \   \/   /
+      \      /   |  | |      /        |  |     |  |  |  |   /  /_\  \   |  |     |   __|  |  . `  |   \      /
+       \    /    |  | |  |\  \----.   |  |     |  `--'  |  /  _____  \  |  `----.|  |____ |  |\   |    \    /
+        \__/     |__| | _| `._____|   |__|      \______/  /__/     \__\ |_______||_______||__| \__|     \__/
+
+
+VirtualEnv se usa para crear un entorno virtual para trabajar en python sin contaminar lo demas
+
+para instalar virtualenv:
+
+desde CMD: pip install virtualenv
+
+para crear un entorno virtual:
+
+desde CMD: virtualenv --python=python2.7 flaskpymongo
+donde se pone la version de python y el nombre del directorio
+
+para activar el entorno virtual:
+
+desde CMD: source flaskpymongo/bin/activate (Mac)
+desde CMD: call flaskpymongo/scripts/activate  (Windows)
+donde flaskpymongo es el nombre del directorio donde esta el entorno virtual
+
+para desactivar el entorno virtual
+
+desde CMD: deactivate
+
+
+Instalaremos desde dentro del entorno las librerias que necesitemos.. y solo serán asequibles desde allí...
+
+
+    _______  __          ___           _______. __  ___        .______   ____    ____ .___  ___.   ______   .__   __.   _______   ______
+   |   ____||  |        /   \         /       ||  |/  /        |   _  \  \   \  /   / |   \/   |  /  __  \  |  \ |  |  /  _____| /  __  \
+   |  |__   |  |       /  ^  \       |   (----`|  '  /   ______|  |_)  |  \   \/   /  |  \  /  | |  |  |  | |   \|  | |  |  __  |  |  |  |
+   |   __|  |  |      /  /_\  \       \   \    |    <   |______|   ___/    \_    _/   |  |\/|  | |  |  |  | |  . `  | |  | |_ | |  |  |  |
+   |  |     |  `----./  _____  \  .----)   |   |  .  \         |  |          |  |     |  |  |  | |  `--'  | |  |\   | |  |__| | |  `--'  |
+   |__|     |_______/__/     \__\ |_______/    |__|\__\        | _|          |__|     |__|  |__|  \______/  |__| \__|  \______|  \______/
+
+
+...En este caso vamos a instalar flask-pymongo:
+
+desde CMD: pip install flask-pymongo
+queda instalado en el virtualenv activado
+
+tambien hay que instalar flask_cors que es una herramienta de seguridad (CORS)
+peticiones de origen cruzado.
+
+dsde CMD: pip install flask_cors
+
+
+
+
+   .___  ___.  __          ___      .______       _______       ___   .___________.    ___      .______        ___           _______. _______
+   |   \/   | |  |        /   \     |   _  \     |       \     /   \  |           |   /   \     |   _  \      /   \         /       ||   ____|
+   |  \  /  | |  |       /  ^  \    |  |_)  |    |  .--.  |   /  ^  \ `---|  |----`  /  ^  \    |  |_)  |    /  ^  \       |   (----`|  |__
+   |  |\/|  | |  |      /  /_\  \   |   _  <     |  |  |  |  /  /_\  \    |  |      /  /_\  \   |   _  <    /  /_\  \       \   \    |   __|
+   |  |  |  | |  `----./  _____  \  |  |_)  |    |  '--'  | /  _____  \   |  |     /  _____  \  |  |_)  |  /  _____  \  .----)   |   |  |____
+   |__|  |__| |_______/__/     \__\ |______/     |_______/ /__/     \__\  |__|    /__/     \__\ |______/  /__/     \__\ |_______/    |_______|
+
+Entramos en mLab (bases compartidas en mongodb) en esta dirección web:
+
+https://mlab.com/home
+
+registrado como
+account:  juan.nouche
+user: juan.nouche@gmail.com
+password: cuatro44
+
+Ver en la página las instruciones para crear una base de datos nueva gratuita y
+crear un nuevo usuario. El usuario de la base de datos es:
+
+juan.nouche@gmail.com
+pass: cuatro44
+
+y la base de datos connect_to_mongo
+
+El uso esta documentado en el código mongo_connect.py
