@@ -12,3 +12,7 @@ Query pagination in Flask and MongoDB https://www.google.es/search?source=hp&ei=
 The Simple Flask Blog Ofiicial Code Base (con Bootstrap) https://github.com/agusmakmun/flaskblog
 
 How to Get Python and JavaScript to Communicate Using JSON  https://www.makeuseof.com/tag/python-javascript-communicate-json/
+
+How to put data on tables html Bootstrap https://datatables.net/examples/styling/bootstrap4
+
+How to kill processes on MAC http://www.chriswrites.com/how-to-view-and-kill-processes-using-the-terminal-in-mac-os-x/

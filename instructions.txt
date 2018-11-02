@@ -79,6 +79,14 @@ y la base de datos connect_to_mongo
 El uso esta documentado en el código mongo_connect.py
 
 
+//// info adicional installacion mongodb on mac ////
+
+Como instalar mongodb on mac https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+como desinstalar mongodb on mac https://medium.com/@rajanmaharjan/uninstall-mongodb-macos-completely-d2a6d6c163f9
+
+//// fin info adicional ////
+
+
     _______  __          ___           _______. __  ___               .______     ______     ______   .___________.    _______.___________..______          ___      .______
     |   ____||  |        /   \         /       ||  |/  /               |   _  \   /  __  \   /  __  \  |           |   /       |           ||   _  \        /   \     |   _  \
     |  |__   |  |       /  ^  \       |   (----`|  '  /      ______    |  |_)  | |  |  |  | |  |  |  | `---|  |----`  |   (----`---|  |----`|  |_)  |      /  ^  \    |  |_)  |
