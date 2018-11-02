@@ -82,7 +82,10 @@ El uso esta documentado en el código mongo_connect.py
 //// info adicional installacion mongodb on mac ////
 
 Como instalar mongodb on mac https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
-como desinstalar mongodb on mac https://medium.com/@rajanmaharjan/uninstall-mongodb-macos-completely-d2a6d6c163f9
+Como desinstalar mongodb on mac https://medium.com/@rajanmaharjan/uninstall-mongodb-macos-completely-d2a6d6c163f9
+
+Como instalar mongodb on Windows https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+Como desinstalar mongodb on Windows https://stackoverflow.com/questions/45497069/how-to-uninstall-mongodb-from-windows
 
 //// fin info adicional ////
 
