@@ -83,11 +83,38 @@ El uso esta documentado en el código mongo_connect.py
 
 Como instalar mongodb on mac https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 Como desinstalar mongodb on mac https://medium.com/@rajanmaharjan/uninstall-mongodb-macos-completely-d2a6d6c163f9
+en mac se carga del daemon mediante el comando CMD mongod
+para pararlo hay que cerrar el shell o elminar el proceso con kill
+luego se ejecuta el comando mongo para ejecutar el acceso a datos
 
 Como instalar mongodb on Windows https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 Como desinstalar mongodb on Windows https://stackoverflow.com/questions/45497069/how-to-uninstall-mongodb-from-windows
+En windows se inicia un servicio (en lugar de daemon) usando el comando (administrador):
+net start MongoDB
+Check your MongoDB log file for the following line:
+[initandlisten] waiting for connections on port 27017
+Para parar el servicio:
+net stop MongoDB
+Si se quiere elminar previo stop teclear:
+sc.exe delete MongoDB
+
+Para cargar el shell de mongo ejecutar desde CMD:
+"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"
+
 
 //// fin info adicional ////
+
+conectar a MLab db desde linea de comandos (una vez instalado el mongo DB)
+
+desde CMD:
+en mac:
+mongo ds143293.mlab.com:43293/connect_to_mongo -u <dbuser> -p <dbpassword>
+mongo ds143293.mlab.com:43293/connect_to_mongo -u juan.nouche@gmail.com -p cuatro44
+en Windows:
+"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe" ds143293.mlab.com:43293/connect_to_mongo -u <dbuser> -p <dbpassword>
+"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe" ds143293.mlab.com:43293/connect_to_mongo -u juan.nouche@gmail.com -p cuatro44
+
+
 
 
     _______  __          ___           _______. __  ___               .______     ______     ______   .___________.    _______.___________..______          ___      .______
