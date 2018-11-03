@@ -14,5 +14,6 @@ The Simple Flask Blog Ofiicial Code Base (con Bootstrap) https://github.com/agus
 How to Get Python and JavaScript to Communicate Using JSON  https://www.makeuseof.com/tag/python-javascript-communicate-json/
 
 How to put data on tables html Bootstrap https://datatables.net/examples/styling/bootstrap4
+How to use datatables with flask https://github.com/SergioLlana/datatables-flask-serverside
 
 How to kill processes on MAC http://www.chriswrites.com/how-to-view-and-kill-processes-using-the-terminal-in-mac-os-x/

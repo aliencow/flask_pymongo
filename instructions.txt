@@ -131,3 +131,5 @@ https://www.youtube.com/watch?v=S7ZLiUabaEo
 https://www.youtube.com/watch?v=PE9ZGniSDW8
 
 Se puede descargar en https://pythonhosted.org/Flask-Bootstrap/
+
+Libro de Flask en internet https://librosweb.es/libro/explore_flask/,
