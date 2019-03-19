@@ -1,0 +1,158 @@
+____    ____  __  .______     .___________. __    __       ___       __       _______ .__   __. ____    ____
+\   \  /   / |  | |   _  \    |           ||  |  |  |     /   \     |  |     |   ____||  \ |  | \   \  /   /
+ \   \/   /  |  | |  |_)  |   `---|  |----`|  |  |  |    /  ^  \    |  |     |  |__   |   \|  |  \   \/   /
+  \      /   |  | |      /        |  |     |  |  |  |   /  /_\  \   |  |     |   __|  |  . `  |   \      /
+   \    /    |  | |  |\  \----.   |  |     |  `--'  |  /  _____  \  |  `----.|  |____ |  |\   |    \    /
+    \__/     |__| | _| `._____|   |__|      \______/  /__/     \__\ |_______||_______||__| \__|     \__/
+
+
+
+
+VirtualEnv se usa para crear un entorno virtual para trabajar en python sin contaminar lo demas
+
+para instalar virtualenv:
+
+desde CMD: pip install virtualenv
+
+para crear un entorno virtual:
+
+desde CMD: virtualenv --python=python2.7 flaskpymongo
+donde se pone la version de python y el nombre del directorio
+
+para activar el entorno virtual:
+
+desde CMD: source flaskpymongo/bin/activate (Mac)
+desde CMD: call flaskpymongo/scripts/activate  (Windows)
+donde flaskpymongo es el nombre del directorio donde esta el entorno virtual
+
+para desactivar el entorno virtual
+
+desde CMD: deactivate
+
+Instalaremos desde dentro del entorno las librerias que necesitemos.. y solo serán asequibles desde allí...
+
+
+
+
+    _______  __          ___           _______. __  ___        .______   ____    ____ .___  ___.   ______   .__   __.   _______   ______
+   |   ____||  |        /   \         /       ||  |/  /        |   _  \  \   \  /   / |   \/   |  /  __  \  |  \ |  |  /  _____| /  __  \
+   |  |__   |  |       /  ^  \       |   (----`|  '  /   ______|  |_)  |  \   \/   /  |  \  /  | |  |  |  | |   \|  | |  |  __  |  |  |  |
+   |   __|  |  |      /  /_\  \       \   \    |    <   |______|   ___/    \_    _/   |  |\/|  | |  |  |  | |  . `  | |  | |_ | |  |  |  |
+   |  |     |  `----./  _____  \  .----)   |   |  .  \         |  |          |  |     |  |  |  | |  `--'  | |  |\   | |  |__| | |  `--'  |
+   |__|     |_______/__/     \__\ |_______/    |__|\__\        | _|          |__|     |__|  |__|  \______/  |__| \__|  \______|  \______/
+
+
+...En este caso vamos a instalar flask-pymongo:
+
+desde CMD: pip install flask-pymongo
+queda instalado en el virtualenv activado
+
+tambien hay que instalar flask_cors que es una herramienta de seguridad (CORS)
+peticiones de origen cruzado.
+
+dsde CMD: pip install flask_cors
+
+
+
+
+   .___  ___.  __          ___      .______       _______       ___   .___________.    ___      .______        ___           _______. _______
+   |   \/   | |  |        /   \     |   _  \     |       \     /   \  |           |   /   \     |   _  \      /   \         /       ||   ____|
+   |  \  /  | |  |       /  ^  \    |  |_)  |    |  .--.  |   /  ^  \ `---|  |----`  /  ^  \    |  |_)  |    /  ^  \       |   (----`|  |__
+   |  |\/|  | |  |      /  /_\  \   |   _  <     |  |  |  |  /  /_\  \    |  |      /  /_\  \   |   _  <    /  /_\  \       \   \    |   __|
+   |  |  |  | |  `----./  _____  \  |  |_)  |    |  '--'  | /  _____  \   |  |     /  _____  \  |  |_)  |  /  _____  \  .----)   |   |  |____
+   |__|  |__| |_______/__/     \__\ |______/     |_______/ /__/     \__\  |__|    /__/     \__\ |______/  /__/     \__\ |_______/    |_______|
+
+Entramos en mLab (bases compartidas en mongodb) en esta dirección web:
+
+https://mlab.com/home
+
+registrado como
+account:  juan.nouche
+user: juan.nouche@gmail.com
+password: cuatro44
+
+Ver en la página las instruciones para crear una base de datos nueva gratuita y
+crear un nuevo usuario. El usuario de la base de datos es:
+
+juan.nouche@gmail.com
+pass: cuatro44
+
+y la base de datos connect_to_mongo
+
+El uso esta documentado en el código mongo_connect.py
+
+
+//// info adicional installacion mongodb on mac ////
+
+Como instalar mongodb on mac https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+Como desinstalar mongodb on mac https://medium.com/@rajanmaharjan/uninstall-mongodb-macos-completely-d2a6d6c163f9
+en mac se carga del daemon mediante el comando CMD mongod
+para pararlo hay que cerrar el shell o elminar el proceso con kill
+luego se ejecuta el comando mongo para ejecutar el acceso a datos
+
+Como instalar mongodb on Windows https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+Como desinstalar mongodb on Windows https://stackoverflow.com/questions/45497069/how-to-uninstall-mongodb-from-windows
+En windows se inicia un servicio (en lugar de daemon) usando el comando (administrador):
+net start MongoDB
+Check your MongoDB log file for the following line:
+[initandlisten] waiting for connections on port 27017
+Para parar el servicio:
+net stop MongoDB
+Si se quiere elminar previo stop teclear:
+sc.exe delete MongoDB
+
+Para cargar el shell de mongo ejecutar desde CMD:
+"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"
+
+
+//// fin info adicional ////
+
+conectar a MLab db desde linea de comandos (una vez instalado el mongo DB)
+
+desde CMD:
+en mac:
+mongo ds143293.mlab.com:43293/connect_to_mongo -u <dbuser> -p <dbpassword>
+mongo ds143293.mlab.com:43293/connect_to_mongo -u juan.nouche@gmail.com -p cuatro44
+en Windows:
+"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe" ds143293.mlab.com:43293/connect_to_mongo -u <dbuser> -p <dbpassword>
+"C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe" ds143293.mlab.com:43293/connect_to_mongo -u juan.nouche@gmail.com -p cuatro44
+
+desde dentro de python:
+
+import pymongo
+from pymongo import MongoClient()
+import urllib
+
+client = MongoClient('mongodb://'+ urllib.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo')
+
+
+
+    _______  __          ___           _______. __  ___               .______     ______     ______   .___________.    _______.___________..______          ___      .______
+    |   ____||  |        /   \         /       ||  |/  /               |   _  \   /  __  \   /  __  \  |           |   /       |           ||   _  \        /   \     |   _  \
+    |  |__   |  |       /  ^  \       |   (----`|  '  /      ______    |  |_)  | |  |  |  | |  |  |  | `---|  |----`  |   (----`---|  |----`|  |_)  |      /  ^  \    |  |_)  |
+    |   __|  |  |      /  /_\  \       \   \    |    <      |______|   |   _  <  |  |  |  | |  |  |  |     |  |        \   \       |  |     |      /      /  /_\  \   |   ___/
+    |  |     |  `----./  _____  \  .----)   |   |  .  \                |  |_)  | |  `--'  | |  `--'  |     |  |    .----)   |      |  |     |  |\  \----./  _____  \  |  |
+    |__|     |_______/__/     \__\ |_______/    |__|\__\               |______/   \______/   \______/      |__|    |_______/       |__|     | _| `._____/__/     \__\ | _|
+
+Como poner Bootstrap en las templates de flask
+Video tutoriales en:
+
+https://www.youtube.com/watch?v=S7ZLiUabaEo
+https://www.youtube.com/watch?v=PE9ZGniSDW8
+
+Se puede descargar en https://pythonhosted.org/Flask-Bootstrap/
+
+Libro de Flask en internet https://librosweb.es/libro/explore_flask/,
+
+    .______    __       __    __   _______ .______   .______       __  .__   __. .___________.       _______  __          ___           _______. __  ___
+    |   _  \  |  |     |  |  |  | |   ____||   _  \  |   _  \     |  | |  \ |  | |           |      |   ____||  |        /   \         /       ||  |/  /
+    |  |_)  | |  |     |  |  |  | |  |__   |  |_)  | |  |_)  |    |  | |   \|  | `---|  |----`      |  |__   |  |       /  ^  \       |   (----`|  '  /
+    |   _  <  |  |     |  |  |  | |   __|  |   ___/  |      /     |  | |  . `  |     |  |           |   __|  |  |      /  /_\  \       \   \    |    <
+    |  |_)  | |  `----.|  `--'  | |  |____ |  |      |  |\  \----.|  | |  |\   |     |  |           |  |     |  `----./  _____  \  .----)   |   |  .  \
+    |______/  |_______| \______/  |_______|| _|      | _| `._____||__| |__| \__|     |__|           |__|     |_______/__/     \__\ |_______/    |__|\__\
+
+Blue print sirve para independizar una parte del código del resto. Imaginemos que un blueprint es una miniaplicacion dentro de la aplicación
+con sus propias carpetas independientes.
+
+__init.py__ no tiene porque tener contenido dentro indica a python que ese directorio es un package.
+__name__ identifica el nombre del modulo activo en python.
