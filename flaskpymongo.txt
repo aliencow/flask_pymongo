@@ -45,7 +45,7 @@ Ejecutar una aplicacion flask
 
  export FLASK_APP=micodigo.py
  flask run
- 
+
 Ejecutar una aplicacion flask en modo debug
 
 export FLASK_APP=micodigo.py
@@ -132,7 +132,7 @@ conectar a MLab db desde linea de comandos (una vez instalado el mongo DB)
 desde CMD:
 en mac:
 mongo ds143293.mlab.com:43293/connect_to_mongo -u <dbuser> -p <dbpassword>
-mongo ds143293.mlab.com:43293/connect_to_mongo -u juan.nouche@gmail.com -p cuatro44
+mongo ds143293.mlab.com:43293/connect_to_mongo -u  -p cuatro44
 en Windows:
 "C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe" ds143293.mlab.com:43293/connect_to_mongo -u <dbuser> -p <dbpassword>
 "C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe" ds143293.mlab.com:43293/connect_to_mongo -u juan.nouche@gmail.com -p cuatro44

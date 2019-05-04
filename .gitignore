@@ -1,2 +1,3 @@
+# flaskpymongo es el virtual environment por eso se excluye
 flaskpymongo
 *.pyc
