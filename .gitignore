@@ -1,3 +1,5 @@
 # flaskpymongo es el virtual environment por eso se excluye
-flaskpymongo
+# flaskpymongo en pythonanywhere no existe..
+__pycache__
 *.pyc
+

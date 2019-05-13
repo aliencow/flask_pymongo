@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # para codificar en utf-8
 
 # basado en videotutorial en https://www.youtube.com/watch?v=rGER0KDdJqI
@@ -27,7 +27,7 @@ CORS(app)
 app.config['MONGO_DBNAME'] = 'connect_to_mongo'
 # configuramos el nombre de la base de datos se accede con la variable mongo.db
 
-app.config['MONGO_URI'] = 'mongodb://'+ urllib.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo'
+app.config['MONGO_URI'] = 'mongodb://'+ urllib.parse.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo'
 # configuramos la ubicacion de la base en mlab (aparece en pantalla)
 # aquí se usa el urllib para el tema de arroba en el nombre de usuario
 
@@ -43,6 +43,6 @@ def add(): # definición de la función que se va a ejecutar desde esa ruta (no 
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 #asi es el punto de entrada principal de una aplicación flask
 #cuando se ejecuta pon python así sabe que es el programa en ejecución __main__
