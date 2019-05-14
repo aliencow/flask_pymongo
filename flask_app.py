@@ -10,6 +10,9 @@ from flask_pymongo import PyMongo
 # importamos pymongo
 from flask_cors import CORS
 # para ejecutar codigo seguro
+from flask.ext.bcrypt import Bcrypt
+# para encpriptar contraseñas etc
+
 
 import urllib
 # para obviar el error de la @ en el nombre de ususario
@@ -18,6 +21,8 @@ app = Flask(__name__)
 # así se define la entrada de la aplicacion de Flask
 CORS(app)
 # para evitar intrusos cuestion de seguridad
+bcrypt = Bcrypt(app)
+# activamos la variable de encriptación por lo que pueda pasar
 
 app.config['MONGO_DBNAME'] = 'connect_to_mongo'
 # configuramos el nombre de la base de datos se accede con la variable mongo.db
@@ -40,7 +45,7 @@ def wibble():
 @app.route("/add")
 # ruta en la web desde el directorio base
 def add(): # definición de la función que se va a ejecutar desde esa ruta (no tiene porque coincidir el nombre)
-    #user = mongo.db.users #crea una collection (tabla) users dentro de nuestra base de datos (si no existe ya)
-    #user.insert({'name' : 'Manolete', 'Apellido':'AnyWhere'}) # insertamos un document (registro)
-    return 'Se ha añadido a Antonio'
+    user = mongo.db.users #crea una collection (tabla) users dentro de nuestra base de datos (si no existe ya)
+    user.insert({'name' : 'Manolete', 'Apellido':'AnyWhere'}) # insertamos un document (registro)
+    return 'Se ha añadido a Manolete'
 
