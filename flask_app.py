@@ -10,7 +10,7 @@ from flask_pymongo import PyMongo
 # importamos pymongo
 from flask_cors import CORS
 # para ejecutar codigo seguro
-from flask.ext.bcrypt import Bcrypt
+from flask_bcrypt import Bcrypt
 # para encpriptar contraseñas etc
 
 
@@ -20,7 +20,7 @@ import urllib
 app = Flask(__name__)
 # así se define la entrada de la aplicacion de Flask
 CORS(app)
-# para evitar intrusos cuestion de seguridad
+# para evitar intrusos cuestion de  (desactivado por el momento)
 bcrypt = Bcrypt(app)
 # activamos la variable de encriptación por lo que pueda pasar
 
