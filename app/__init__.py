@@ -14,6 +14,10 @@ from flask_bcrypt import Bcrypt
 # para encpriptar contraseñas etc
 import urllib
 # para obviar el error de la @ en el nombre de ususario
+from flask_mongoengine import MongoEngine
+# para usar los objetos de mongoengine
+
+
 
 app = Flask(__name__)
 # así se define la entrada de la aplicacion de Flask
@@ -31,5 +35,9 @@ app.config['MONGO_URI'] = 'mongodb://'+ urllib.quote("juan.nouche@gmail.com") +'
 
 mongo = PyMongo(app)
 # conectamos con la base de datos nuestra app
+
+db = MongoEngine(app)
+
+
 
 from app import routes
