@@ -29,7 +29,7 @@ bcrypt = Bcrypt(app)
 app.config['MONGO_DBNAME'] = 'connect_to_mongo'
 # configuramos el nombre de la base de datos se accede con la variable mongo.db
 
-app.config['MONGO_URI'] = 'mongodb://'+ urllib.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo'
+app.config['MONGO_URI'] = 'mongodb://'+ urllib.parse.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo'
 # configuramos la ubicacion de la base en mlab (aparece en pantalla)
 # aquí se usa el urllib para el tema de arroba en el nombre de usuario
 
