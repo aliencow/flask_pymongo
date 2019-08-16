@@ -47,7 +47,7 @@ peticiones de origen cruzado.
 
 dsde CMD: pip install flask_cors
 
-
+Tutorial Save and Retrieve Files In a MongoDB With Flask-Pymongo https://www.youtube.com/watch?v=DsgAuceHha4
 
 
    .___  ___.  __          ___      .______       _______       ___   .___________.    ___      .______        ___           _______. _______
@@ -118,7 +118,9 @@ import pymongo
 from pymongo import MongoClient()
 import urllib
 
-client = MongoClient('mongodb://'+ urllib.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo')
+client = MongoClient('mongodb://'+ urllib.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo') #python 2.7
+client = MongoClient('mongodb://'+ urllib.parse.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo') #python 3
+
 
 
 

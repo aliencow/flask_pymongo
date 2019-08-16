@@ -2,6 +2,8 @@
 # para codificar en utf-8
 from flask import render_template
 from app import app, mongo
+from forms import LoginForm
+
 
 
 @app.route('/')
@@ -20,6 +22,11 @@ def index():
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
 
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Sign In', form=form)
+
 @app.route('/wibble')
 def wibble():
     return 'This is my pointless new page'
@@ -30,3 +37,5 @@ def add(): # definición de la función que se va a ejecutar desde esa ruta (no 
     user = mongo.db.users #crea una collection (tabla) users dentro de nuestra base de datos (si no existe ya)
     user.insert({'name' : 'Manolete', 'Apellido':'AnyWhere'}) # insertamos un document (registro)
     return 'Se ha añadido a Manolete'
+
+
