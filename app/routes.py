@@ -4,16 +4,14 @@ from flask import render_template, flash, redirect
 from app import app, mongo
 from app.forms import LoginForm
 
-
-
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Miguel'}
+    user = {'username': 'Nouchocks'}
     posts = [
         {
             'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
+            'body': 'Una superprueba de uso de datos en web!'
         },
         {
             'author': {'username': 'Susan'},
