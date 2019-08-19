@@ -42,6 +42,15 @@ Super tutorial de flask: https://blog.miguelgrinberg.com/post/the-flask-mega-tut
 desde CMD: pip install flask-pymongo
 queda instalado en el virtualenv activado
 
+REQUIREMENTS:
+Además de pymongo hay que instalar otras librerias como puede ser wtf forms cors etc.
+para ello guardamos una lista con los paquetes necesarios en requirements.txt y desde
+shell se ejecuta:
+
+pip install -r requirements.txt
+
+
+
 tambien hay que instalar flask_cors que es una herramienta de seguridad (CORS)
 peticiones de origen cruzado.
 
