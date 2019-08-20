@@ -4,6 +4,5 @@ flask-mongoengine
 flask-cors
 flask-bcrypt
 flask-wtf
-flask-bootstrap
+flask-bootstrap4
 lorem
-
