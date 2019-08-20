@@ -3,6 +3,13 @@
 from flask import render_template, flash, redirect
 from app import app, mongo
 from app.forms import LoginForm
+import lorem
+
+"""
+s = lorem.sentence()  # 'Eius dolorem dolorem labore neque.'
+p = lorem.paragraph()
+t = lorem.text()
+"""
 
 @app.route('/')
 @app.route('/index')
@@ -18,7 +25,9 @@ def index():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
+
+    ipsum = lorem.text()
+    return render_template('index.html', title='Home', user=user, posts=posts, ipsum = ipsum)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -32,6 +41,7 @@ def login():
 
 @app.route('/wibble')
 def wibble():
+    flash('Acabas de entrar en wibble')
     return 'This is my pointless new page'
 
 @app.route("/add")

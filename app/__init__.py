@@ -19,14 +19,9 @@ from flask_mongoengine import MongoEngine
 # para usar los objetos de mongoengine
 from flask_bootstrap import Bootstrap
 # para ponerlo todo bonito
-from flask_nav import Nav
-from flask_nav.elements import Navbar, Subgroup, View, Link, Text, Separator
-# para la barra de navegacion
-
 
 app = Flask(__name__)
 # así se define la entrada de la aplicacion de Flask
-
 
 app.config.from_object(Config)
 #app.secret_key = 'DU3Vwfkn1u9VHXj39T5doC6WnHiifEVv'
@@ -53,35 +48,5 @@ mongo = PyMongo(app)
 db = MongoEngine(app)
 
 bootstrap = Bootstrap(app)
-
-nav = Nav()
-
-@nav.navigation()
-def mynavbar():
-    return Navbar(
-        'mysite',
-        View('Home', 'index'),
-        View('Wibble', 'wibble'),
-        Link('Login', 'login')
-    )
-
-nav.init_app(app)
-
-"""
-nav.register_element('my_navbar', Navbar(
-    'thenav',
-    View('Home Page', 'index'),
-    View('Item One', 'item', item=1),
-    Link('Google', 'https://www.google.com'),
-    Separator(),
-    Text('Here is some text.'),
-    Subgroup('Extras',
-        Link('yahoo', 'https://www.yahoo.com'),
-        View('Index', 'index'))
-    ))
-"""
-
-
-
 
 from app import routes
