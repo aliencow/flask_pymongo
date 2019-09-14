@@ -36,17 +36,16 @@ app.config['MONGO_DBNAME'] = 'connect_to_mongo'
 # configuramos el nombre de la base de datos se accede con la variable mongo.db
 
 # conexion a mongodb para python 3 urllib.parse.quote ATTENCION A LA VERSION DE PYTHON!!!
-#app.config['MONGO_URI'] = 'mongodb://'+ urllib.parse.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo'
+app.config['MONGO_URI'] = 'mongodb://'+ urllib.parse.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo'
 # conexion a mongodb para python 2.7 urllib.quote
-app.config['MONGO_URI'] = 'mongodb://'+ urllib.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo'
+#app.config['MONGO_URI'] = 'mongodb://'+ urllib.quote("juan.nouche@gmail.com") +':cuatro44@ds143293.mlab.com:43293/connect_to_mongo'
 # configuramos la ubicacion de la base en mlab (aparece en pantalla)
 # aquí se usa el urllib para el tema de arroba en el nombre de usuario
 
 mongo = PyMongo(app)
 # conectamos con la base de datos nuestra app
-
+bootstrap = Bootstrap(app)
 db = MongoEngine(app)
 
-bootstrap = Bootstrap(app)
-
 from app import routes
+from app import models

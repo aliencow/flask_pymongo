@@ -1,8 +1,32 @@
-from app import db
-import datetime
-
+# -*- coding: utf-8 -*-
+# para codificar en utf-8
+# models.py
+from app import app, mongo, db
 
 class User(db.Document):
-    nickname = db.StringField( max_length=64 )
-	email = db.StringField( max_length=120, unique=True, required=True )
-	created = db.DateTimeField( default=datetime.datetime.utcnow ) # utc to keep it universal
+    """ Class para almacenar usuarios
+    """
+    nombre = db.StringField(max_length=120, required=True)
+    password = db.StringField(required = True)
+
+    meta = {
+        'collection': 'Usuarios',
+        'ordering': 'name',
+        }
+
+class Post(db.Document):
+    ''' Class for defining structure of reddit-top-posts collection
+    '''
+    url = db.URLField(required=True)
+    date = db.DateTimeField(required=True)
+    date_str = db.StringField(max_length=10, required=True)
+    commentsUrl = db.URLField(required=True)
+    sub = db.StringField(max_length=20, required=True) # subredit can be 20 chars
+    title = db.StringField(max_length=300, required=True) # title can be 300 chars
+    score = db.IntField(required=True)
+
+    meta = {
+        'collection': 'top_reddit_posts', # collection name
+        'ordering': ['-score'], # default ordering
+        'auto_create_index': False, # MongoEngine will not create index
+        }
