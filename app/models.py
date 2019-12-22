@@ -3,15 +3,17 @@
 # models.py
 from app import app, mongo, db
 
-class User(db.Document):
+class Passwords(db.Document):
     """ Class para almacenar usuarios
     """
-    nombre = db.StringField(max_length=120, required=True)
+    email = db.StringField(max_lengt=120)
+    user = db.StringField(max_length=120, required=True)
     password = db.StringField(required = True)
+
 
     meta = {
         'collection': 'Usuarios',
-        'ordering': 'name',
+        'ordering': 'user',
         }
 
 class Post(db.Document):
